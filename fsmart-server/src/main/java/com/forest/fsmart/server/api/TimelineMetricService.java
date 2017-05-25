@@ -2,6 +2,7 @@ package com.forest.fsmart.server.api;
 
 import com.forest.fsmart.server.control.MetricsStore;
 import com.forest.fsmart.server.orm.bean.TimelineMetric;
+import com.forest.fsmart.server.orm.bean.TimelineMetrics;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,9 +22,9 @@ import java.util.List;
 @RestController
 @EnableAutoConfiguration
 @Path("/fsmart")
-public class TimelineMetrics {
+public class TimelineMetricService {
 
-  private static final Log LOG = LogFactory.getLog(TimelineMetrics.class);
+  private static final Log LOG = LogFactory.getLog(TimelineMetricService.class);
 
   private List<TimelineMetric> allMetrics = new ArrayList<TimelineMetric>();
 

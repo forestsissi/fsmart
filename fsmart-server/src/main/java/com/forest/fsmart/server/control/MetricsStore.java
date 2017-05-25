@@ -1,7 +1,8 @@
 package com.forest.fsmart.server.control;
 
 
-import com.forest.fsmart.server.api.TimelineMetrics;
+import com.forest.fsmart.server.api.TimelineMetricService;
+import com.forest.fsmart.server.orm.bean.TimelineMetrics;
 
 import java.io.IOException;
 import java.sql.SQLException;
